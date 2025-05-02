@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitacora de Armando Lara</title>
+
+<link rel="icon" type="image/png" href="img/icon.png">
+
+ 
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+
+            font-family: "Overpass", serif;
+
+            background-image: url(img/galaxy.jpg);
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            color: #F2AE2E;
+
+        }
+
+        header, article, section, footer {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+        }
+
+        header {
+
+            background-color: black;
+
+            text-align: center;
+
+        }
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            overflow: hidden;
+
+            background-color: black;
+
+            text-align: center;
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: 20px auto;
+
+            padding: 10px;
+
+            border-radius: 10px;
+
+            font-family: "Overpass", serif;
+ 
+        }
+
+        article {
+
+            background-color: rgb(25, 24, 24);
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+        }
+
+        section {
+
+            background-color: black;
+
+            padding: 10px;
+
+            border-radius: 5px;
+
+        }
+
+        .galeria {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 10px;
+
+        }
+
+        .galeria img {
+
+            width: 250px;
+
+            height: auto;
+
+            border-radius: 10px;
+
+            transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+
+        }
+
+        .galeria img:hover {
+
+            transform: scale(1.5); 
+
+            position: relative;
+
+            z-index: 10; 
+
+        }
+
+        footer {
+
+            background-color: black;
+
+            text-align: center;
+
+        }
+        body {
+            background-color: #cfcece;
+        }
+        .txtcolor {
+            color: #D923BA;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .cuadrado {
+            text-align: justify;
+            width: 500px;
+            height: 900px;
+            background: linear-gradient(45deg, #0D0D0D 50%, #737373 80%);            
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            padding: 30px;
+            border: 10px solid #5E17A6;
+            box-shadow: 27px 31px 8px -15px rgba(0,0,0,0.75);
+        }
+        #slideshow {
+        text-align: center;
+        overflow: hidden;
+        height: 510px;
+        width: 728px;
+        margin-bottom: 400px;
+}
+ 
+        .slide-wrapper {
+        width: 2912px;
+        animation: slide 18s ease infinite;
+}
+ 
+        .slide {
+        float: left;
+        height: 510px;
+        width: 728px;
+}
+ 
+        .slide:nth-child(1) { /*Elementos de una etiqueta que estan dentro*/
+        background-color: rgb(216, 41, 243);
+        }
+ 
+        .slide:nth-child(2) {
+        background-color: coral;
+        }
+ 
+        .slide:nth-child(3) {
+        background-color: greenyellow;
+        }
+ 
+        .slide:nth-child(4) {
+        background-color: brown;
+        }
+ 
+        @keyframes slide {
+        20% {margin-left: 0px;}
+        30% {margin-left: -728px;}
+        50% {margin-left: -728px;}
+        60% {margin-left: -1456px;}
+        70% {margin-left: -1456px;}
+        80% {margin-left: -2184px;}
+        90% {margin-left: -2184px;}
+        }
+
+        p[class="red"] {
+            color: red;
+        }
+
+        .brother {
+            width: 80px;
+            height: 80px;
+            background-color: brown;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: rebeccapurple;
+        }
+
+
+    </style>
+</head>
+<body>
+<header id="#Home">
+<h1 style="color: #F24BD6;">Hola, buen dia, esta es la bitácora de <span style="color: red;">Héctor Armando Lara</span>!</h1>
+</header>
+ 
+    <div class="navbar">
+        <a href="https://armaddox.github.io/bitacora/" style="color: #8C2E7D;">Home</a>
+        <a href="#Encabezados" style="color: #8C2E7D;">Encabezados</a>
+        <a href="#Parrafo" style="color: #8C2E7D;">Parrafo</a>
+        <a href="#Listas" style="color: #8C2E7D;">Listas</a>
+        <a href="#DOM" style="color: #8C2E7D;">DOM</a>
+        <a href="#Imagenes" style="color: #8C2E7D;">Imagenes</a>
+        <a href="#Video" style="color: #8C2E7D;">Video</a>
+        <a href="https://armaddox.github.io/bitacora-contacto/" style="color: #8C2E7D;">Contacto</a>
+        <a href="#Footer" style="color: #8C2E7D;">Ir abajo</a>
+    </div>
+ 
+    <article id="Encabezados">
+<h2>Encabezados en HTML</h2>
+<section><h1>Esto es un < h1 ></h1></section>
+<section><h2>Esto es un < h2 ></h2></section>
+<section><h3>Esto es un < h3 ></h3></section>
+<section><h4>Esto es un < h4 ></h4></section>
+<section><h5>Esto es un < h5 ></h5></section>
+</article>
+ 
+    <article id="Parrafo">
+<h2>Ejemplo de Parrafo</h2>
+<section>
+<p>Esto es como se vería un párrafo en HTML.</p>
+</section>
+</article>
+ 
+    <article id="Listas">
+<h2>Listas en HTML</h2>
+<section>
+<h3>Lista ordenada por puntos. < ul ></h3> 
+<ul>
+<li>Uno</li>
+<li>Dos</li>
+<li>Tres</li>
+<li>Cuatro</li>
+<li>Cinco</li>
+</ul>
+</section>
+<section>
+<h3>Lista ordenada por numeros. < ol ></h3>
+<ol>
+<li>Uno</li>
+<li>Dos</li>
+<li>Tres</li>
+<li>Cuatro</li>
+<li>Cinco</li>
+</ol>
+</section>
+<section>
+<h3>Lista ordenada por numeros, empezando desde un numero en especifico en este caso con el 10. < ol ></h3>
+<ol start="10">
+<li>Diez</li>
+<li>Once</li>
+<li>Doce</li>
+<li>Trece</li>
+<li>Catorce</li>
+</ol>
+</section>
+</article>
+ 
+    <article id="DOM">
+<h2>Esta es la explicacion del DOM</h2> 
+<section>
+<P>Un DOM, es la manera en que se puede ver de forma que se organiza y representa una pagina web.</P>
+</section>
+</article>
+ 
+    <article id="Imagenes">
+<h2>Imagenes en HTML</h2>
+<div class="galeria">
+<section>
+<h3>Imagen con un link.</h3>
+<img src="https://images.alphacoders.com/122/thumb-1920-1228491.jpg" alt="">
+</section>
+<section>
+<h3>Imagen desde los archivos.</h3>
+<img src="img/godspkmn.jpg" alt="">
+</section>
+ 
+        <section> 
+<h3>Imagen de diagrama.</h3>
+<img src="img/diagrama.png" alt="">
+</section>
+ 
+        <section>
+<h3>Url de imagen</h3>
+<a style="color: #8C651C;" href="https://wallpapers.com/images/featured/fondos-de-pantalla-de-pokemon-geniales-qmcgnudvclph45ia.jpg">Click</a>
+</section>
+</div>
+</article>
+ 
+    <article id="Video">
+<h2>Video Embed</h2> 
+<section>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ExVHy-LV8Oc?si=uB3zS6oBvy9xVsAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<article>
+    <div class="cuadrado">
+        <p class="txtcolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="">Click aqui!</a>
+     
+        <ul>
+            <li>Hola</li>
+            <li>Hola</li>
+            <li>Hola</li>
+        </ul>
+     
+        <p>Hola</p>
+    </div>
+</article>
+
+<article>
+<div id="slideshow">
+    <div class="slide-wrapper">
+        <div class="slide">
+            <h1 class="slide-number">1</h1>
+        </div>
+        <div class="slide">
+            <h1 class="slide-number">2</h1>
+        </div>
+        <div class="slide">
+            <h1 class="slide-number">3</h1>
+        </div>
+        <div class="slide">
+            <h1 class="slide-number">4</h1>
+        </div>
+        <div class="slide">
+            <h1 class="slide-number">5</h1>
+        </div>
+    </div>
+</div>
+</article>
+
+<article>
+    <h2>Selector de Atributo</h2>
+    <p class="red">Parrafo del class de atributo.</p>
+</article>
+
+
+<div class="brother"></div>
+<div class="brother"></div>
+<div class="brother"></div>
+
+<button class="btn">Click Aqui!</button>
+
+ 
+<footer id="Footer">
+<h1>Copyright Armando Lara. 2025.</h1>
+</footer>
+</body>
+</html>
