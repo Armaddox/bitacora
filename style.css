@@ -1,0 +1,432 @@
+/*Global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*Tipografia*/
+h1 { font-size: 2.5rem; font-weight: 700; }
+h2 { font-size: 1.8rem; font-weight: 600; }
+h3 { font-size: 1.4rem; font-weight: 800; }
+h4 { font-size: 1.1rem; font-weight: 600; }
+h5 { font-size: 1rem; font-weight: 400; color: aliceblue; }
+h6 { color: azure; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url('img/space.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/*Navbar*/
+.navbar {
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  padding: 12px 15px;
+  display: block;
+  white-space: nowrap;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  color: red;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons a svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.nav-icons a:hover svg {
+  fill: red;
+}
+
+/* Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons a svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.nav-icons a:hover svg {
+  fill: red;
+}
+
+      .parallax {
+            /* The image used */
+            background-image: url("img/godspkmn.jpg");
+ 
+            /* Set a specific height */
+            height: 1000px;
+ 
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+.container {
+  margin-left: 60px;
+  margin-right: 20px;
+}
+
+/* Artículos */
+article {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #1e1e1e;
+}
+
+h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #ff9900;
+  margin: 10px 0;
+}
+
+/* Galería de imágenes */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Cuadrado */
+.cuadrado {
+    text-align: justify;
+    width: 500px;
+    height: 900px;
+    background: linear-gradient(45deg, #0D0D0D 50%, #737373 80%);            
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 30px;
+    border: 10px solid #5E17A6;
+    box-shadow: 27px 31px 8px -15px rgba(0,0,0,0.75);
+}  
+
+.txtcolor {
+  color: #8C651C;
+}
+
+/* Slideshow general */
+/* Slideshow general */
+#slideshow {
+  width: 600px;         /* Ajusta el ancho deseado */
+  height: 400px;        /* Ajusta la altura deseada */
+  overflow: hidden;
+  margin: 40px auto;    /* Centrado horizontal */
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Contenedor de las slides */
+.slide-wrapper {
+  display: flex;
+  width: calc(600px * 5);  /* 600px * número de imágenes */
+  animation: slide 25s infinite;
+}
+
+/* Cada slide */
+.slide {
+  width: 600px;
+  height: 400px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Imágenes dentro de cada slide */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Rellena sin deformar */
+}
+
+/* Animación automática */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(0); }
+  25%  { transform: translateX(-600px); }
+  45%  { transform: translateX(-600px); }
+  50%  { transform: translateX(-1200px); }
+  70%  { transform: translateX(-1200px); }
+  75%  { transform: translateX(-1800px); }
+  95%  { transform: translateX(-1800px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+/* Otros */
+.brother {
+  width: 100%;
+  height: 50px;
+  background: #555;
+  margin: 10px 0;
+}
+
+p[class="red"] {
+    color: red;
+}
+
+.hex {
+            background-color: #3592d0;
+            color: white;
+        }
+ 
+        .keyword {
+            background-color: red;
+            color: black;
+        }
+ 
+        .rgb {
+            /*Define los niveles de Rojo, Verde y Azul*/
+            background-color: rgb(46, 204, 113);
+            color: white;
+        }
+ 
+        .rgba {
+            background-color: rgba(231, 77, 60, 0.662);
+            color: white;
+        }
+ 
+        .hsl {
+            /*Se basa en el círculo cromatico
+        h = Hue (tono, 0–360°, como un ángulo en el círculo de color)
+        s = Saturation (saturación, 0%–100%)
+        l = Lightness (luminosidad, 0%–100%)
+        */
+            background-color: hsl(200, 64%, 51%);
+            color: white;
+        }
+ 
+        .hsla {
+            background-color: hsla(300, 100%, 50%, 0.604);
+            color: white;
+        }
+ 
+        div {
+            padding: 10px;
+            margin: 5px;
+            font-family: sans-serif;
+        }
+#btn-arriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#btn-arriba:hover {
+  background-color: black;
+  color: red;
+}
+
+.ejemplo {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 20px 0;
+}
+
+.footer-center img {
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  overflow-x: hidden;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 280px;
+  margin: 10px;
+}
+
+.footer-left textarea {
+  width: 100%;
+  resize: none;
+  padding: 10px;
+}
+
+.enviar-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.enviar-btn:hover {
+  background-color: black;
+  color: red;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+  margin: 10px;
+}
+
+.footer-right h5 {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: red; 
+}
+
+.social-svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
